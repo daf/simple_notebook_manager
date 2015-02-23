@@ -317,7 +317,7 @@ class SimpleNotebookManager(NotebookManager):
 
         # Save .py script as well
         py_stream = StringIO()
-        current.write(nb, py_stream, u'json')
+        current.write(nb, py_stream, u'py')
         notebook['py'] = py_stream.getvalue()
         notebook['py_last_modified'] = tz.utcnow()
         py_stream.close()
